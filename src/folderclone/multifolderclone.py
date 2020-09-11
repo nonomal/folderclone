@@ -261,6 +261,7 @@ class multifolderclone():
                     if i in drive:
                         drive.remove(i)
                 self.bad_drives = []
+                drive_to_use = 1
 
                 # If there is less than 2 SAs, exit
                 if len(drive) == 1:
