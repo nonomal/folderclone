@@ -1,3 +1,6 @@
+# Feedback Requested!
+I'm planning a full rewrite and redesign of folderclone to make it a much better tool. Please provide feedback on the current version of folderclone using this form: https://forms.gle/yfCSt2oVR2gf7agz7
+
 # folderclone - A project that allows you copy large folders to Shared Drives.
 
 
