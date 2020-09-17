@@ -19,7 +19,7 @@ setup(
             'multimanager=folderclonecli.mmparse:main',
             'multifolderclone=folderclonecli.mfcparse:main']
     },
-     version='0.5.4b1',
+     version='0.5.5',
      author='Spazzlo',
      description='A tool to copy large folders to Shared Drives.',
      long_description=long_description,
