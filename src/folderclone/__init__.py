@@ -1,1 +1,1 @@
-pass
+raise Exception("Due to changes to Google's APIs, Folderclone is dead.")

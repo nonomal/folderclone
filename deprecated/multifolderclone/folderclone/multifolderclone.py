@@ -122,6 +122,7 @@ class multifolderclone():
                 reason = error_details['error']['errors'][0]['reason']
                 # self._add_error_stats(reason)
                 if reason == 'userRateLimitExceeded':
+                    print(f'rate limit reached on call to {request.uri}')
                     return False
                 elif reason == 'storageQuotaExceeded':
                     print('Got storageQuotaExceeded error. You are not using a Shared Drive.')
