@@ -11,7 +11,7 @@ setup(
             'multimanager=folderclonecli:main',
             'multifolderclone=folderclonecli:main']
     },
-     version='1.0.0',
+     version='1.0.1',
      author='Spazzlo',
      description="Due to changes to Google's APIs, Folderclone is dead.",
      long_description=long_description,
