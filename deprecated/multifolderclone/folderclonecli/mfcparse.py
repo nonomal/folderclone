@@ -10,6 +10,7 @@ def main():
     parse.add_argument('--no-recursion',default=False,action='store_true',help='Do not recursively copy folders.')
     parse.add_argument('--verbose',default=False,action='store_true',help='Verbose output. WARNING: Very verbose.')
     parse.add_argument('--force-threads',default=False,action='store_true',help='Overrides the thread limit check.')
+    parse.add_argument('--share-publicly',default=False,action='store_true',help='Shares the files publicly after coyping.')
     parsereq = parse.add_argument_group('required arguments')
     parsereq.add_argument('--source-id','--source', '-s',help='The source ID of the folder to copy.',required=True)
     parsereq.add_argument('--destination-id','--destination', '-d',action='append',help='The destination ID of the folder to copy to.',required=True)
@@ -20,11 +21,11 @@ def main():
         path=args.path,
         width=args.width,
         thread_count=args.threads,
-        skip_bad_dests=args.skip_bad_dests,
-        no_recursion=args.no_recursion
+        no_recursion=args.no_recursion,
         verbose=args.verbose,
         skip_bad_dests=args.skip_bad_dests,
-        override_thread_check=args.force_threads
+        override_thread_check=args.force_threads,
+        share_publicly=args.share_publicly
     )
     try:
         mfc.clone()
@@ -32,5 +33,7 @@ def main():
         print(e)
         if str(e) == 'More threads than there is service accounts.':
             print('Use --force-threads to override this check.')
+        else:
+            raise e
     except KeyboardInterrupt:
         print('Quitting.')
